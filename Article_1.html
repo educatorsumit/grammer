@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conjunction Quiz</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#4a148c;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.question{
+    background:#f8f9ff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    border-left:6px solid #667eea;
+}
+
+.question p{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+label{
+    display:block;
+    padding:10px;
+    margin:5px 0;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+label:hover{
+    background:#e8ebff;
+}
+
+.correct{
+    background:#d4edda !important;
+    color:#155724;
+    font-weight:bold;
+}
+
+.wrong{
+    background:#f8d7da !important;
+    color:#721c24;
+    font-weight:bold;
+}
+
+button{
+    display:block;
+    margin:30px auto;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+#result{
+    text-align:center;
+    margin-top:20px;
+    font-size:24px;
+    font-weight:bold;
+    color:#4a148c;
+}
+
+.score-box{
+    background:#f3e5f5;
+    border-radius:15px;
+    padding:20px;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>📚 Conjunction Quiz</h1>
+<p class="subtitle">Test your grammar skills with 10 questions!</p>
+
+<form id="quizForm">
+
+<div class="question">
+<p>1. She ate ____ apple.</p>
+<label><input type="radio" name="q1" value="A"> a</label>
+<label><input type="radio" name="q1" value="B"> an</label>
+<label><input type="radio" name="q1" value="C"> the</label>
+<label><input type="radio" name="q1" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>2. He has ____ dog.</p>
+<label><input type="radio" name="q2" value="A"> a</label>
+<label><input type="radio" name="q2" value="B"> an</label>
+<label><input type="radio" name="q2" value="C"> the</label>
+<label><input type="radio" name="q2" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>3. ____ moon looks beautiful tonight.</p>
+<label><input type="radio" name="q3" value="A"> a</label>
+<label><input type="radio" name="q3" value="B"> an</label>
+<label><input type="radio" name="q3" value="C"> the</label>
+<label><input type="radio" name="q3" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>4. I saw ____ elephant at the zoo.</p>
+<label><input type="radio" name="q4" value="A"> a</label>
+<label><input type="radio" name="q4" value="B"> an</label>
+<label><input type="radio" name="q4" value="C"> the</label>
+<label><input type="radio" name="q4" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>5. She is reading ____ book.</p>
+<label><input type="radio" name="q5" value="A"> a</label>
+<label><input type="radio" name="q5" value="B"> an</label>
+<label><input type="radio" name="q5" value="C"> the</label>
+<label><input type="radio" name="q5" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>6. ____ sun rises in the east.</p>
+<label><input type="radio" name="q6" value="A"> a</label>
+<label><input type="radio" name="q6" value="B"> an</label>
+<label><input type="radio" name="q6" value="C"> the</label>
+<label><input type="radio" name="q6" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>7. She carried ____ umbrella.</p>
+<label><input type="radio" name="q7" value="A"> a</label>
+<label><input type="radio" name="q7" value="B"> an</label>
+<label><input type="radio" name="q7" value="C"> the</label>
+<label><input type="radio" name="q7" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>8. He bought ____ new car.</p>
+<label><input type="radio" name="q8" value="A"> a</label>
+<label><input type="radio" name="q8" value="B"> an</label>
+<label><input type="radio" name="q8" value="C"> the</label>
+<label><input type="radio" name="q8" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>9. We visited ____ Taj Mahal.</p>
+<label><input type="radio" name="q9" value="A"> a</label>
+<label><input type="radio" name="q9" value="B"> an</label>
+<label><input type="radio" name="q9" value="C"> the</label>
+<label><input type="radio" name="q9" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>10. It took ____ hour to finish.</p>
+<label><input type="radio" name="q10" value="A"> a</label>
+<label><input type="radio" name="q10" value="B"> an</label>
+<label><input type="radio" name="q10" value="C"> the</label>
+<label><input type="radio" name="q10" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>11. My father is ____ teacher.</p>
+<label><input type="radio" name="q11" value="A"> a</label>
+<label><input type="radio" name="q11" value="B"> an</label>
+<label><input type="radio" name="q11" value="C"> the</label>
+<label><input type="radio" name="q11" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>12. ____ Ganges is a sacred river.</p>
+<label><input type="radio" name="q12" value="A"> a</label>
+<label><input type="radio" name="q12" value="B"> an</label>
+<label><input type="radio" name="q12" value="C"> the</label>
+<label><input type="radio" name="q12" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>13. She ate ____ orange.</p>
+<label><input type="radio" name="q13" value="A"> a</label>
+<label><input type="radio" name="q13" value="B"> an</label>
+<label><input type="radio" name="q13" value="C"> the</label>
+<label><input type="radio" name="q13" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>14. I need ____ pen.</p>
+<label><input type="radio" name="q14" value="A"> a</label>
+<label><input type="radio" name="q14" value="B"> an</label>
+<label><input type="radio" name="q14" value="C"> the</label>
+<label><input type="radio" name="q14" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>15. Please close ____ door.</p>
+<label><input type="radio" name="q15" value="A"> a</label>
+<label><input type="radio" name="q15" value="B"> an</label>
+<label><input type="radio" name="q15" value="C"> the</label>
+<label><input type="radio" name="q15" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>16. She wants to become ____ engineer.</p>
+<label><input type="radio" name="q16" value="A"> a</label>
+<label><input type="radio" name="q16" value="B"> an</label>
+<label><input type="radio" name="q16" value="C"> the</label>
+<label><input type="radio" name="q16" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>17. He works in ____ hospital.</p>
+<label><input type="radio" name="q17" value="A"> a</label>
+<label><input type="radio" name="q17" value="B"> an</label>
+<label><input type="radio" name="q17" value="C"> the</label>
+<label><input type="radio" name="q17" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>18. ____ Himalayas are very high.</p>
+<label><input type="radio" name="q18" value="A"> a</label>
+<label><input type="radio" name="q18" value="B"> an</label>
+<label><input type="radio" name="q18" value="C"> the</label>
+<label><input type="radio" name="q18" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>19. She cooked ____ egg for breakfast.</p>
+<label><input type="radio" name="q19" value="A"> a</label>
+<label><input type="radio" name="q19" value="B"> an</label>
+<label><input type="radio" name="q19" value="C"> the</label>
+<label><input type="radio" name="q19" value="D"> no article</label>
+</div>
+
+<div class="question">
+<p>20. He studies at ____ university.</p>
+<label><input type="radio" name="q20" value="A"> a</label>
+<label><input type="radio" name="q20" value="B"> an</label>
+<label><input type="radio" name="q20" value="C"> the</label>
+<label><input type="radio" name="q20" value="D"> no article</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">🚀 Submit Quiz</button>
+
+</form>
+
+<div class="score-box">
+    <div id="result">Your score will appear here.</div>
+</div>
+
+<div class="score-box" id="explanationBox" style="display:none;">
+    <h2>📖 Answer Explanations</h2>
+    <div id="explanations"></div>
+</div>
+
+<script>
+function checkQuiz(){
+
+const answers = {
+q1:"B",
+q2:"A",
+q3:"C",
+q4:"B",
+q5:"A",
+q6:"C",
+q7:"B",
+q8:"A",
+q9:"C",
+q10:"B",
+q11:"A",
+q12:"C",
+q13:"B",
+q14:"A",
+q15:"C",
+q16:"B",
+q17:"A",
+q18:"C",
+q19:"B",
+q20:"A"
+};
+
+const explanations = {
+q1:"'an' is used before vowel sounds. Example: an apple.",
+q2:"'a' is used before consonant sounds. Example: a dog.",
+q3:"'the' refers to a specific object already known.",
+q4:"'an' is used before words beginning with a vowel sound like 'elephant'.",
+q5:"'a' is used before consonant sounds like 'book'.",
+q6:"'the' is used for unique things like the sun.",
+q7:"'an' is used before vowel sounds like 'umbrella'.",
+q8:"'a' is used before consonant sounds like 'car'.",
+q9:"'the' is used for a specific place already identified.",
+q10:"'an' is used before vowel sounds like 'hour' (silent h).",
+q11:"'a' is used before consonant sounds like 'teacher'.",
+q12:"'the' is used for rivers: the Ganges.",
+q13:"'an' is used before vowel sounds like 'orange'.",
+q14:"'a' is used before consonant sounds like 'pen'.",
+q15:"'the' is used when referring to a specific item.",
+q16:"'an' is used before vowel sounds like 'engineer'.",
+q17:"'a' is used before consonant sounds like 'hospital'.",
+q18:"'the' is used for mountain ranges: the Himalayas.",
+q19:"'an' is used before vowel sounds like 'egg'.",
+q20:"'a' is used before consonant sounds like 'university' (sounds like 'yu')."
+};
+let score = 0;
+
+for(let question in answers){
+
+let options = document.querySelectorAll(`input[name="${question}"]`);
+
+options.forEach(option=>{
+
+let label = option.parentElement;
+
+if(option.value === answers[question]){
+label.classList.add("correct");
+}
+
+if(option.checked && option.value !== answers[question]){
+label.classList.add("wrong");
+}
+
+option.disabled = true;
+
+});
+
+let selected = document.querySelector(`input[name="${question}"]:checked`);
+
+if(selected && selected.value === answers[question]){
+score++;
+}
+}
+
+let message = "";
+
+if(score === 20){
+    message = "🏆 Perfect! You scored 20/20!";
+}
+else if(score >= 16){
+    message = "🌟 Excellent! You scored " + score + "/20";
+}
+else if(score >= 10){
+    message = "👍 Good Job! You scored " + score + "/20";
+}
+else{
+    message = "📖 Keep Practicing! You scored " + score + "/20";
+}
+
+document.getElementById("result").innerHTML = message;
+
+let explanationHTML = "";
+
+for(let question in answers){
+
+let selected = document.querySelector(`input[name="${question}"]:checked`);
+
+const userAnswer = selected ? selected.value : "No Answer";
+
+explanationHTML += `
+<div style="
+margin:15px 0;
+padding:15px;
+border-radius:10px;
+background:#f8f9ff;
+border-left:5px solid #667eea;
+">
+<b>Question ${question.substring(1)}</b><br>
+
+${
+userAnswer === answers[question]
+? "<span style='color:green'>✅ Correct</span>"
+: "<span style='color:red'>❌ Incorrect</span>"
+}
+
+<br><br>
+
+<b>Explanation:</b> ${explanations[question]}
+</div>
+`;
+}
+
+document.getElementById("explanations").innerHTML = explanationHTML;
+document.getElementById("explanationBox").style.display = "block";
+
+}
+</script>
+
+</body>
+</html>
